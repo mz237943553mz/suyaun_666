@@ -1,0 +1,138 @@
+# #定义函数
+# def hello():
+#     print('helle world!')
+# #调用函数
+# hello()
+
+# def area(width,weight):
+#     return width*weight
+#
+# def print_welcome(name):
+#     print("welcom",name)
+#
+# print_welcome("周星期")
+# w=4
+# h=5
+# print("width=",w,"height=",h,"area=",area(4,5))
+
+# def printme(str):
+#     "打印任何传入的字符串"
+#     print(str)
+#     return
+# #调用函数
+# printme("我要调用用户自定义函数")
+# printme("再次调用一个函数")
+
+
+# def changeint(a):
+#     a=[1,2,3]
+#     return a
+# b=1
+# print(changeint(b))
+
+'''
+# 必须参数
+
+#可写函数说明
+def printme(a,b):
+    "打印任何传入的字符串"
+    print(a,b)
+    return
+d=1
+c=3
+#调用printme函数
+printme(d,c)
+
+'''
+
+# # 关键字参数
+# #可写函数说明
+# def printinfo(name,age):
+#     "打印任何传入的字符"
+#     print("名字：",name)
+#     print("年龄：",age)
+#     return
+#
+# #调用printinfo函数
+# printinfo(age=50,name="刘德华")
+'''
+# 默认参数
+
+#可写说明函数
+def printinfo(name,age=30):
+    "打印任何传入的字符串"
+    print("名字：",name)
+    print("年龄：",age)
+    return
+
+#调用printinfo函数
+printinfo(age=50,name="刘德华")
+print('------------------')
+printinfo(name="刘德华")
+'''
+'''
+# 不定长参数
+#a：普通参数
+#*params:可变参数
+def printinfo(a,*params):
+    print("输出：")
+    print(a)#输出普通参数
+    #变量输出可变参数接收的数据
+    for var in params:
+        print(var)
+    return
+#d调用函数，aa传给普通函数
+#其余变量传给可变参数
+printinfo("aa","bb","34","23","32")
+printinfo("aa","bb","12")
+'''
+
+# def ab(a,*args):
+#     print(args)
+# ab(1,2,3,4)
+#
+# def d(**kwargs):
+#     print(kwargs)
+# d(a=1,b=2)
+
+#在函数混合使用*以及**
+# def h(a,*args,**kwargs):
+#     print(a,args,kwargs)
+# h(1,2,3,x=4,y=5)
+#
+# def person(name,age,**kw):
+#     print("name:",name,"age:",age,"other:",kw)
+# person("adma",45,gender="m",job="engineer")
+
+
+# def func(z,b,c,d):
+#     print(z,b,c,d)
+# a=(1,2,3,4)
+# func(*a)
+# #在函数调用时，*会以单个元素的形式解包一个元祖，使其成为独立的参数
+#
+# def person(name,age,**kw):
+#     print("name:",name,"age:",age,"other:",kw)
+# extra={"city":"beijing","job":"engineer"}
+# person("jack","24",**extra)
+# 在函数调用时，**会以键/值对的形式解包一个字典，使其成为独立的关键字参数。
+#
+# 匿名函数
+#该匿名函数有两个参数
+#函数体是计算两个参数的和
+#函数的返回值就是函数体表达的结果
+#匿名函数赋值要给一个变量sum,再利用变量来调用该函数
+# sum=lambda a,b:a+b
+# #使用变量来调用该函数
+# print(sum(18,72))
+# print(sum(79,12))
+# return语句
+#可写函数说明
+def sum(arg1,arg2):
+    #返回两个参数的和
+    total=arg1+arg2
+    print("函数内：",total)
+    return
+#调用函数
+total=sum(10,20)
+print("函数外：",total)

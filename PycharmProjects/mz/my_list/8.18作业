@@ -1,0 +1,48 @@
+# 第一个
+# 从键盘输入字符串，统计传入字符串中的【数字】、【字母】、【空格】和【其他】的个数
+
+str1=input("从键盘输入字符串")
+digital=0
+alpha=0
+sapce=0
+others=0
+for i in str1:
+    if i.isdigit():
+        digital+=1
+        # print(digital)
+    elif i.isalpha():
+        alpha+=1
+    elif i.isspace():
+        sapce+=1
+    else:
+        others+=1
+print(digital,alpha,sapce,others)
+
+
+# 第二个
+# 模拟轮盘抽奖游戏
+# 轮盘分为三部分: 一等奖, 二等奖和三等奖;
+# 轮盘转的时候是随机的,
+#        如果范围在[0,0.08)之间,代表一等奖,
+#        如果范围在[0.08,0.3)之间,代表2等奖,
+#        如果范围在[0.3, 1.0)之间,代表3等奖,
+# 模拟本次活动1000人参加, 模拟游戏时需要准备各等级奖品的个数.
+# import random
+# counter1=0
+# counter2=0
+# counter3=0
+# for i in range(1,1001):
+#     a = random.random()
+#     if 0<=a and a<0.08:
+#         counter1+=1
+#     elif 0.08<=a and a<0.3:
+#          counter2+=1
+#     elif 0.3<=a and a<1.0:
+#         counter3+=1
+# print("一等奖的个数为：",counter1)
+# print("二等奖的个数为：",counter2)
+# print("三等奖的个数为：", counter3)
+
+#十进制转换为二进制、八进制、16进制
+# num=int(input("请输入一个数字"))
+
